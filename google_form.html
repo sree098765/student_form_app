@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .nav{
+            border-radius: 15px;
+            height:30%;
+            max-width:850px;
+            width:90%;
+            background-color:rgb(255, 255, 255);
+            font-size:25px;
+            padding:0px;
+            margin:0px;
+            color:rgb(0, 0, 0);
+            border:1px solid rgb(221, 220, 220);
+        }
+        body{
+            background-color:rgb(238, 237, 237);
+            display:flex;
+            flex-direction: column;
+            justify-content:flex-start;  
+            align-items: center; 
+            padding-top:10px ;
+        }
+         h2{
+            margin:10px 0;
+            font-size:30px;
+            color:#202124; 
+            padding-right:45px;
+            padding-left:10px;
+            font-weight:500;
+            
+        }
+          p{
+            font-size:19px;
+            color:#5f6368; 
+            margin-top:0;
+            padding-right:45px;
+            padding-left:10px;
+        }
+        .sub{
+            height:25%;
+            
+            max-width:850px;
+            width:100%;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            padding:35px;
+            margin:15px;
+            font-size: 23px;
+            padding-left: 30px;
+            padding-right: 60px;
+            border:1px solid rgb(221, 220, 220);
+            box-sizing: border-box;
+
+        }
+        .sub input{
+            width:90%;
+            border:none;
+            border-bottom: 1px solid grey;
+            font-size:16px;
+            padding: 15px;
+            margin-top:20px;
+            outline:none;
+        }
+        .sub input:focus{
+            border-bottom:1px solid rgb(87, 225, 87);
+        }
+        .gg{
+            margin-top:0%;
+            background-color:rgb(128, 23, 160);
+            height:25px;
+            
+            width:100%;
+            color:white;
+            border-radius:15px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .error{
+            display:none;
+            color:red;
+            font-size:16px;
+            margin-top: 10px;
+        }
+        input:invalid ~ .error{
+            display:block;
+        }
+        .submit-btn{
+            margin:13px;
+            background-color: green;
+            height:45px;
+            width:90px;
+            font-size:20px;
+            color:white;
+            border-radius: 15px;
+            border:0px;
+            
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="gg">
+        </div> <h2>2024-25AY Student Project Expo/ Hackathon/ Workshop/ Presentation Details</h2>
+        <br>
+        <p>The name, email address and photo associated with your Google Account will be recorded when you upload files and submit this form</p>
+    </div>
+    <form action="/submit" method="POST">
+    <div class="sub"><label>
+        Name of the Event Participated(Project Expo/Hackathon/Workshop/Presentation)</label>
+        <input type="text" required placeholder="Your answer">
+        <div class="error">  
+This is a required question</div>
+</div>
+
+
+<div class="sub"><label>
+        Student Name</label>
+        <input type="text" required placeholder="Your answer">
+        <div class="error">  
+This is a required question</div></div>
+<div class="sub"><label>
+    College Email
+</label>
+        <input type="email" required placeholder="Your answer">
+        <div class="error">  
+This is a required question</div></div>
+<button type="submit" class="submit-btn">Submit</button></form>
+</body>
+</html>
