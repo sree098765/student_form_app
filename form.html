@@ -84,13 +84,11 @@
             border-radius: 15px;
             border: 0px;
         }
-
-        /* Mobile responsiveness */
         @media screen and (max-width: 600px) {
             .nav, .sub {
                 width: 95%;
                 max-width: 100%;
-                padding: 15px;
+                padding: 10px;
             }
             h2 {
                 font-size: 20px;
@@ -98,12 +96,19 @@
             p {
                 font-size: 14px;
             }
+            .sub {
+                font-size: 16px;
+                padding: 12px;
+                margin: 10px 0;
+            }
             .sub input {
                 font-size: 14px;
+                padding: 8px 0;
             }
             .submit-btn {
                 width: 100%;
-                font-size: 18px;
+                font-size: 16px;
+                height: 40px;
             }
         }
     </style>
@@ -123,19 +128,16 @@
             <input type="text" name="event_name" required placeholder="Your answer">
             <div class="error">This is a required question</div>
         </div>
-
         <div class="sub">
             <label>Student Name</label>
             <input type="text" name="student_name" required placeholder="Your answer">
             <div class="error">This is a required question</div>
         </div>
-
         <div class="sub">
             <label>College Email</label>
             <input type="email" name="college_email" required placeholder="Your answer">
             <div class="error">This is a required question</div>
         </div>
-
         <button type="submit" class="submit-btn">Submit</button>
     </form>
 </body>
