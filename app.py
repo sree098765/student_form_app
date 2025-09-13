@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from openpyxl import Workbook, load_workbook
 import os
 
@@ -8,8 +8,7 @@ EXCEL_FILE = "submissions.xlsx"
 
 @app.route("/")
 def index():
-    with open("form.html", "r", encoding="utf-8") as f:
-        return f.read()
+    return render_template("form.html")
 
 @app.route("/submit", methods=["POST"])
 def submit():
