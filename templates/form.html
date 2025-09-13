@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .nav{
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            font-size: 25px;
+            padding: 10px;
+            margin: 0px;
+            color: rgb(0, 0, 0);
+            border: 1px solid rgb(221, 220, 220);
+            width: 90%;
+            max-width: 850px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(238, 237, 237);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;  
+            align-items: center; 
+            padding-top: 10px;
+            margin: 0;
+        }
+        h2{
+            margin: 10px 0;
+            font-size: 30px;
+            color: #202124; 
+            font-weight: 500;
+        }
+        p{
+            font-size: 19px;
+            color: #5f6368; 
+            margin-top: 0;
+        }
+        .sub{
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            margin: 15px;
+            font-size: 23px;
+            width: 100%;
+            max-width: 850px;
+            border: 1px solid rgb(221, 220, 220);
+            box-sizing: border-box;
+        }
+        .sub input{
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid grey;
+            font-size: 16px;
+            padding: 10px 0;
+            margin-top: 20px;
+            outline: none;
+        }
+        .sub input:focus{
+            border-bottom: 1px solid rgb(87, 225, 87);
+        }
+        .gg{
+            margin-top: 0%;
+            background-color: rgb(128, 23, 160);
+            height: 25px;
+            width: 100%;
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+        .error{
+            display: none;
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        input:invalid ~ .error{
+            display: block;
+        }
+        .submit-btn{
+            margin: 13px 0;
+            background-color: green;
+            height: 45px;
+            width: 90px;
+            font-size: 20px;
+            color: white;
+            border-radius: 15px;
+            border: 0px;
+        }
+        @media screen and (max-width: 600px) {
+            .nav, .sub {
+                width: 95%;
+                max-width: 100%;
+                padding: 10px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .sub {
+                font-size: 16px;
+                padding: 12px;
+                margin: 10px 0;
+            }
+            .sub input {
+                font-size: 14px;
+                padding: 8px 0;
+            }
+            .submit-btn {
+                width: 100%;
+                font-size: 16px;
+                height: 40px;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Project Expo Form</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="gg"></div>
+        <h2>2024-25AY Student Project Expo/ Hackathon/ Workshop/ Presentation Details</h2>
+        <p>The name, email address and photo associated with your Google Account will be recorded when you upload files and submit this form</p>
+    </div>
+    <form action="/submit" method="POST">
+        <div class="sub">
+            <label>Name of the Event Participated(Project Expo/Hackathon/Workshop/Presentation)</label>
+            <input type="text" name="event_name" required placeholder="Your answer">
+            <div class="error">This is a required question</div>
+        </div>
+        <div class="sub">
+            <label>Student Name</label>
+            <input type="text" name="student_name" required placeholder="Your answer">
+            <div class="error">This is a required question</div>
+        </div>
+        <div class="sub">
+            <label>College Email</label>
+            <input type="email" name="college_email" required placeholder="Your answer">
+            <div class="error">This is a required question</div>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>
