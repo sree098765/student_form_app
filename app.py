@@ -8,7 +8,7 @@ EXCEL_FILE = "submissions.xlsx"
 
 @app.route("/")
 def index():
-    return render_template("form.html")
+    return render_template("google_form.html")
 
 @app.route("/submit", methods=["POST"])
 def submit():
